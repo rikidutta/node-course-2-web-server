@@ -48,6 +48,11 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Unable to open this page'
     });
 });
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Project Page'
+    });
+});
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
